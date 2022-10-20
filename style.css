@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%); /* private message hover */
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%); /* "black" */
+
+    --font: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--font);
+    font-size: 1.6rem;
+}
+a {
+    text-decoration: none;
+}
+p, h2 {
+    margin: 0;
+    padding: 0;
+}
+main {
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+@media (min-width: 480px) {
+    body {
+        background-color: var(--Very-light-grayish-blue);
+    }
+    .container {
+        margin: 0 auto;
+        padding: 3rem 3rem 0 3rem;
+        max-width: 65rem;
+        background-color: var(--White);
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding-top: 4rem;
+    }
+}
+
+
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+.header div h2 {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+.unread-notifications {
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: .1rem 1rem;
+    margin-left: 1rem;
+    border-radius: .5rem;
+}
+
+.read-notifications-btn {
+    color: var(--Dark-grayish-blue);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: var(--font);
+    font-weight: 500;
+    transition: .3s;
+}
+.read-notifications-btn:hover {
+    cursor: pointer;
+    color: var(--Blue);
+    transition: .3s;
+}
+
+
+
+.notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.notification {
+    width: 100%;
+    display: flex;
+    border-radius: 1rem;
+    margin: .5rem 0;
+    padding: 1.5rem;
+}
+
+.unread {
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.notification-profile-picture {
+    width: 4rem;
+    margin-right: 1.5rem;
+}
+
+.notification-profile-picture img {
+    width: 100%;
+    height: auto;
+}
+
+.notification-detail {
+    width: 100%;
+}
+
+.notification-detail p {
+    font-size: 14px;
+}
+
+.notification-username, .notification-action-detail {
+    font-weight: 800;
+    transition: .3s;
+}
+
+.notification-username:hover, .notification-action-detail:hover {
+    color: var(--Blue);
+    transition: .3s;
+}
+
+ .notification-username {
+    color: var(--Very-dark-blue);
+}
+
+.notification-action, .notification-action-detail {
+    color: var(--Dark-grayish-blue);
+}
+
+.club {
+    color: var(--Blue);
+}
+
+.red-dot {
+    width: .8rem;
+    height: .8rem;
+    background-color: var(--Red);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: .5rem;
+}
+
+.notification-time {
+    color: var(--Grayish-blue);
+}
+
+.private-message {
+    flex-direction: column;
+    padding: 0;
+}
+
+.notification-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    color: var(--Dark-grayish-blue);
+    border: 1px solid var(--Light-grayish-blue-2);
+    background-color: var(--White);
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+.notification-message:hover {
+    border: none;
+    background-color: var(--Light-grayish-blue-1);
+    border: 1px solid var(--Light-grayish-blue-1);
+    transition: .3s;
+}
+
+.notification-action-detail-image {
+    width: 6rem;
+    margin-left: 1.5rem;
+}
+
+.notification-action-detail-image img {
+    width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
